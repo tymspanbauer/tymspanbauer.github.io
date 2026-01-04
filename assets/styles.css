@@ -26,9 +26,13 @@ body{
   color:var(--ink);
 }
 
-main{
+main,
+.page,
+.content,
+.container{
   flex:1;
 }
+
 
 .site-header{
   position:sticky;
@@ -136,4 +140,6 @@ nav a.active{
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
-  g
+  gap:10px;
+  margin-bottom:6px;
+}
