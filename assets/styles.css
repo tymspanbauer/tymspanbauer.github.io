@@ -35,13 +35,12 @@ main,
 
 footer{
   margin-top:auto;
-  max-width:1040px;
-  margin-left:auto;
-  margin-right:auto;
   padding:18px 16px 28px;
   color:var(--muted);
   font-size:14px;
+  text-align:center;
 }
+
 
 .site-header{
   position:sticky;
