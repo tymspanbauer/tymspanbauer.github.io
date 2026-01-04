@@ -17,11 +17,17 @@
 *{box-sizing:border-box}
 
 body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   background:var(--page);
   color:var(--ink);
-  scroll-padding-top:72px;
+}
+
+main{
+  flex:1;
 }
 
 .site-header{
