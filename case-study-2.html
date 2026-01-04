@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Study 1 | Ty Spanbauer</title>
+
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <style>
+    .page{
+    max-width:1040px;
+    margin:0 auto;          
+    padding:28px 16px 0;    
+  }
+
+
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:12px;
+    }
+
+    .crumb{
+      color:#667085;
+      text-decoration:none;
+      font-size:14px;
+    }
+    .crumb:hover{ text-decoration:underline; }
+
+    .header{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+      margin-bottom:16px;
+    }
+
+    .header-row{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .title{
+      margin:0;
+      font-size:26px;
+      letter-spacing:-.2px;
+    }
+
+    .subtitle{
+      margin:8px 0 0;
+      color:var(--sub);
+      line-height:1.55;
+      max-width:80ch;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:16px;
+    }
+    @media (min-width: 900px){
+      .layout{ grid-template-columns: 1.25fr .75fr; }
+    }
+
+    .facts{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+      color:var(--sub);
+      line-height:1.45;
+      font-size:14px;
+    }
+    .facts strong{ color:var(--ink); }
+
+    .section-title{
+      margin:0 0 8px;
+      font-size:16px;
+    }
+
+    .divider{
+      height:1px;
+      background: var(--border);
+      margin:14px 0;
+    }
+
+    .links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+
+    /* Make placeholder links look intentional */
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      color:#344054;
+      font-weight:600;
+      font-size:13px;
+      text-decoration:none;
+    }
+    .pill:hover{ filter:brightness(.98); }
+
+    /* Optional: reduce dead space on tall screens */
+    .spacer{ height: 8px; }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Ty Spanbauer</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="Resume.html">Resume</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="topbar">
+      <a class="crumb" href="index.html#projects">← Back to Projects</a>
+      <span class="badge">Planned</span>
+    </div>
+
+    <section class="header" aria-label="Case study header">
+      <div class="header-row">
+        <h1 class="title">Case Study 1</h1>
+      </div>
+      <p class="subtitle">
+        Placeholder page. This case study will be published once finalized. The final version will be written for hiring managers:
+        clear context, constraints, approach, and measurable impact.
+      </p>
+
+      <div class="links" aria-label="Quick links">
+        <a class="pill" href="Resume.html">Resume</a>
+        <a class="pill" href="index.html#contact">Contact</a>
+        <!-- Add these later when real -->
+        <!-- <a class="pill" href="https://github.com/..." target="_blank" rel="noopener">GitHub repo</a> -->
+        <!-- <a class="pill" href="https://..." target="_blank" rel="noopener">Demo</a> -->
+      </div>
+    </section>
+
+    <section class="layout" aria-label="Case study body">
+      <article class="card">
+        <h2 class="section-title">What this will include</h2>
+        <p style="margin:0; color:var(--sub); line-height:1.6;">
+          A concise write-up that shows how I approach ambiguous work with real constraints—what I did, why I did it, and what changed as a result.
+          This is intentionally structured to be skimmable in under 60 seconds.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 class="section-title">Outline</h2>
+        <ul style="margin:0; padding-left:18px; color:var(--sub); line-height:1.7;">
+          <li><strong>Context:</strong> problem + stakeholders + constraints</li>
+          <li><strong>Approach:</strong> methods, assumptions, tradeoffs</li>
+          <li><strong>Execution:</strong> steps taken and tools used</li>
+          <li><strong>Results:</strong> impact metrics and before/after</li>
+          <li><strong>Artifacts:</strong> visuals, templates, or code (as applicable)</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2 class="section-title">Next steps</h2>
+        <ul style="margin:0; padding-left:18px; color:var(--sub); line-height:1.7;">
+          <li>Draft case study narrative and figures</li>
+          <li>Add any supporting artifacts (screenshots, templates, code snippets)</li>
+          <li>Publish final version with measurable outcomes</li>
+        </ul>
+      </article>
+
+      <aside class="card">
+        <h2 class="section-title">Quick facts</h2>
+        <ul class="facts">
+          <li><strong>Status:</strong> Planned</li>
+          <li><strong>Type:</strong> Case study / write-up</li>
+          <li><strong>Focus:</strong> Analytics • Decision-making • Reporting</li>
+          <li><strong>Artifacts:</strong> Figures + summary PDF (when ready)</li>
+          <li><strong>Last updated:</strong> 2026-01-04</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2 class="section-title">Why it matters</h2>
+        <p style="margin:0; color:var(--sub); line-height:1.6;">
+          This is here to show how I communicate impact and decisions—not just the final answer.
+        </p>
+      </aside>
+    </section>
+
+    <div class="spacer"></div>
+  </main>
+
+  <footer>© 2025 Ty Spanbauer</footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>
