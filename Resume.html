@@ -4,82 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Resume | Ty Spanbauer</title>
+
+  <!-- Shared site styling -->
+  <link rel="stylesheet" href="assets/styles.css">
+
   <style>
-    :root { --bg:#111; --fg:#fff; --muted:#888; --active:#76c7ff; }
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f6f7f9;color:#333;scroll-padding-top:72px}
-
-    /* Header */
-    .site-header{position:sticky;top:0;z-index:999;background:var(--bg);border-bottom:1px solid #202020}
-    .wrap{max-width:1040px;margin:auto;padding:12px 16px;display:flex;gap:20px;align-items:center}
-    .brand{color:var(--fg);font-weight:700;text-decoration:none;font-size:18px}
-    nav{margin-left:auto;display:flex;gap:16px}
-    nav a{color:#aaa;text-decoration:none;padding:6px 10px;border-radius:8px}
-    nav a:hover{color:#fff;background:#1c1c1c}
-    nav a.active{color:var(--active);background:#1c1c1c}
-
-    /* Page content (use container, not .wrap) */
-    .container{max-width:1040px;margin:28px auto;padding:0 16px}
-    .actions{display:flex;gap:12px;margin:8px 0 16px;flex-wrap:wrap}
-    .btn{display:inline-block;background:#111;color:#fff;text-decoration:none;padding:8px 12px;border-radius:8px}
-    .btn:hover{opacity:.95}
-
-    /* PDF viewer */
+    /* Resume page-specific */
+    .container{
+      max-width:1040px;
+      margin:28px auto;
+      padding:0 16px;
+    }
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin:10px 0 16px;
+    }
     .pdf-container{display:grid;place-items:center}
     .pdf-frame{
       width:min(100%,1000px);
       height:min(85vh,1200px);
-      border:1px solid #e5e7eb;
-      border-radius:12px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
       background:#fff;
       box-shadow:0 8px 24px rgba(0,0,0,.06);
     }
-    .note{color:#666;font-size:14px;margin-top:8px}
-    @media (max-width:640px){ .pdf-frame{height:75vh} }
+    .note{
+      color:#667085;
+      font-size:14px;
+      margin-top:10px;
+      line-height:1.5;
+    }
+    @media (max-width:640px){
+      .pdf-frame{height:75vh}
+    }
   </style>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html">Ty Spanbauer</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="automation.html">Automation</a>
-      <a href="summarizer.html">Summarizer</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="Resume.html">Resume</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Ty Spanbauer</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="Resume.html">Resume</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<main class="container">
-  <h1>Resume</h1>
+  <main class="container">
+    <section class="section" style="margin:0; padding:0;">
+      <h2 style="margin:0 0 6px;">Resume</h2>
+      <p class="muted" style="margin:0;">
+        PDF view below. Use the buttons to open or download.
+      </p>
 
-  <div class="actions">
-    <a class="btn" href="/assets/ty_spanbauer_resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
-    <a class="btn" href="/assets/ty_spanbauer_resume.pdf" download>Download PDF</a>
-  </div>
+      <div class="actions">
+        <a class="btn primary" href="assets/ty_spanbauer_resume.pdf" target="_blank" rel="noopener">
+          Open in new tab
+        </a>
+        <a class="btn" href="assets/ty_spanbauer_resume.pdf" download>
+          Download PDF
+        </a>
+      </div>
+    </section>
 
-  <div class="pdf-container">
-    <iframe
-      class="pdf-frame"
-      src="/assets/ty_spanbauer_resume.pdf#zoom=page-width&view=FitH"
-      title="Ty Spanbauer – Resume"
-    ></iframe>
-  </div>
+    <div class="pdf-container">
+      <iframe
+        class="pdf-frame"
+        src="assets/ty_spanbauer_resume.pdf#zoom=page-width&view=FitH"
+        title="Ty Spanbauer – Resume"
+      ></iframe>
+    </div>
 
-  <p class="note">
-    If the viewer doesn’t load, <a href="/assets/ty_spanbauer_resume.pdf">open the PDF directly</a>.
-  </p>
-</main>
+    <p class="note">
+      If the viewer doesn’t load, <a href="assets/ty_spanbauer_resume.pdf" target="_blank" rel="noopener">open the PDF directly</a>.
+    </p>
+  </main>
 
-<script>
-  // highlight current nav item
-  const here = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('nav a').forEach(a=>{
-    const target = a.getAttribute('href').split('#')[0];
-    if (here === target) a.classList.add('active');
-  });
-</script>
+  <footer>© 2025 Ty Spanbauer</footer>
+
+  <!-- Shared site behavior (active nav) -->
+  <script src="assets/site.js"></script>
 </body>
 </html>
