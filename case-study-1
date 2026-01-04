@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Study 1 | Ty Spanbauer</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .content{max-width:1040px;margin:28px auto;padding:0 16px}
+    .crumb{display:inline-block;margin:6px 0 14px;color:#667085;text-decoration:none;font-size:14px}
+    .crumb:hover{text-decoration:underline}
+    .grid2{display:grid;grid-template-columns:1fr;gap:16px;margin-top:14px}
+    @media (min-width:900px){.grid2{grid-template-columns:1.2fr .8fr}}
+    .checklist{margin:10px 0 0;padding-left:18px;color:var(--sub);line-height:1.6}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Ty Spanbauer</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="Resume.html">Resume</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content">
+    <a class="crumb" href="index.html#projects">← Back to Projects</a>
+
+    <section class="section" style="margin:0;padding:0;">
+      <div class="cardhead" style="margin-bottom:8px;">
+        <h2 style="margin:0;">Case Study 1</h2>
+        <span class="badge">Planned</span>
+      </div>
+      <p class="muted" style="margin:0;">
+        Placeholder page. This case study will be published once finalized.
+      </p>
+    </section>
+
+    <section class="grid2">
+      <div class="card">
+        <h3 style="margin:0 0 8px;">What will be included</h3>
+        <p style="margin:0;">
+          A concise write-up showing problem context, constraints, approach, and measurable impact.
+          Links to code or artifacts will be added if applicable.
+        </p>
+
+        <div class="cta" style="margin-top:14px;">
+          <a class="btn primary" href="Resume.html">Resume</a>
+          <a class="btn" href="index.html#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 8px;">Outline</h3>
+        <ul class="checklist">
+          <li>Problem statement + constraints</li>
+          <li>Approach / method</li>
+          <li>Tools used (as relevant)</li>
+          <li>Results / impact metrics</li>
+          <li>Links (repo/demo) when available</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Ty Spanbauer</footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>
