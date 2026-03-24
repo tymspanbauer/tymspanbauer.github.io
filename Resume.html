@@ -8,38 +8,47 @@
   <!-- Shared site styling -->
   <link rel="stylesheet" href="assets/styles.css">
 
-  <style>
-    /* Resume page-specific */
-    .container{
-      max-width:1040px;
-      margin:28px auto;
-      padding:0 16px;
+ <style>
+  .container {
+    max-width: 1400px;   /* wider page */
+    margin: 28px auto;
+    padding: 0 16px;
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 0 16px;
+  }
+
+  .pdf-container {
+    width: 100%;
+  }
+
+  .pdf-frame {
+    display: block;
+    width: 100%;
+    height: 90vh;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  }
+
+  .note {
+    color: #667085;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 640px) {
+    .pdf-frame {
+      height: 75vh;
     }
-    .actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin:10px 0 16px;
-    }
-    .pdf-container{display:grid;place-items:center}
-    .pdf-frame{
-      width:min(100%,1000px);
-      height:min(85vh,1200px);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      background:#fff;
-      box-shadow:0 8px 24px rgba(0,0,0,.06);
-    }
-    .note{
-      color:#667085;
-      font-size:14px;
-      margin-top:10px;
-      line-height:1.5;
-    }
-    @media (max-width:640px){
-      .pdf-frame{height:75vh}
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
