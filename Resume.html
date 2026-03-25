@@ -2,53 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume | Ty Spanbauer</title>
-
-  <!-- Shared site styling -->
-  <link rel="stylesheet" href="assets/styles.css">
-
- <style>
-  .container {
-    max-width: 1400px;   /* wider page */
-    margin: 28px auto;
-    padding: 0 16px;
-  }
-
-  .actions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 10px 0 16px;
-  }
-
-  .pdf-container {
-    width: 100%;
-  }
-
-  .pdf-frame {
-    display: block;
-    width: 100%;
-    height: 90vh;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(0,0,0,.06);
-  }
-
-  .note {
-    color: #667085;
-    font-size: 14px;
-    margin-top: 10px;
-    line-height: 1.5;
-  }
-
-  @media (max-width: 640px) {
-    .pdf-frame {
-      height: 75vh;
-    }
-  }
-</style>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
@@ -64,39 +20,49 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="resume-page">
     <section class="resume-header">
-      <h2 style="margin:0 0 6px;">Resume</h2>
-      <p class="muted" style="margin:0;">
-        PDF view below. Use the buttons to open or download.
+      <h1>Resume</h1>
+      <p class="muted">
+        View the PDF below, or open it in a new tab for the best full-page experience.
       </p>
 
-      <div class="actions">
-        <a class="btn primary" href="assets/ty_spanbauer_resume.pdf" target="_blank" rel="noopener">
+      <div class="resume-actions">
+        <a
+          class="btn primary"
+          href="assets/ty_spanbauer_resume.pdf"
+          target="_blank"
+          rel="noopener"
+        >
           Open in new tab
         </a>
-        <a class="btn" href="assets/ty_spanbauer_resume.pdf" download>
+
+        <a
+          class="btn"
+          href="assets/ty_spanbauer_resume.pdf"
+          download
+        >
           Download PDF
         </a>
       </div>
     </section>
 
-    <div class="pdf-container">
+    <section class="resume-viewer-section">
       <iframe
-        class="pdf-frame"
-        src="assets/ty_spanbauer_resume.pdf#zoom=page-width&view=FitH"
-        title="Ty Spanbauer – Resume"
+        class="resume-pdf-frame"
+        src="assets/ty_spanbauer_resume.pdf"
+        title="Ty Spanbauer Resume PDF"
       ></iframe>
-    </div>
+    </section>
 
-    <p class="note">
-      If the viewer doesn’t load, <a href="assets/ty_spanbauer_resume.pdf" target="_blank" rel="noopener">open the PDF directly</a>.
+    <p class="resume-note">
+      If the embedded viewer does not display correctly, 
+      <a href="assets/ty_spanbauer_resume.pdf" target="_blank" rel="noopener">open the PDF directly</a>.
     </p>
   </main>
 
   <footer>© 2025 Ty Spanbauer</footer>
 
-  <!-- Shared site behavior (active nav) -->
   <script src="assets/site.js"></script>
 </body>
 </html>
