@@ -39,7 +39,10 @@ footer{
 }
 
 
-
+.resume-header{
+  margin:0 0 16px;
+  padding:0;
+}
 .site-header{
   position:sticky;
   top:0;
