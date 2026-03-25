@@ -2,9 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Resume | Ty Spanbauer</title>
-  <link rel="stylesheet" href="assets/styles.css" />
+
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <style>
+    /* Resume page only */
+    .resume-shell {
+      width: min(1400px, calc(100% - 32px));
+      margin: 28px auto;
+    }
+
+    .resume-header {
+      margin: 0 0 16px;
+    }
+
+    .resume-header h1 {
+      margin: 0 0 8px;
+      font-size: 40px;
+      letter-spacing: -0.3px;
+    }
+
+    .resume-header p {
+      margin: 0;
+    }
+
+    .resume-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 14px 0 18px;
+    }
+
+    .resume-viewer {
+      width: 100%;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 24px rgba(0,0,0,.06);
+      overflow: hidden;
+    }
+
+    .resume-viewer iframe {
+      display: block;
+      width: 100%;
+      height: 88vh;
+      min-height: 900px;
+      border: 0;
+      background: #fff;
+    }
+
+    .resume-note {
+      color: #667085;
+      font-size: 14px;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .resume-header h1 {
+        font-size: 34px;
+      }
+
+      .resume-viewer iframe {
+        height: 78vh;
+        min-height: 700px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .resume-shell {
+        width: calc(100% - 24px);
+      }
+
+      .resume-header h1 {
+        font-size: 30px;
+      }
+
+      .resume-viewer iframe {
+        height: 72vh;
+        min-height: 520px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -20,45 +101,36 @@
     </div>
   </header>
 
-  <main class="resume-page">
-    <section class="resume-header">
-      <h1>Resume</h1>
-      <p class="muted">
-        View the PDF below, or open it in a new tab for the best full-page experience.
-      </p>
+  <main>
+    <div class="resume-shell">
+      <section class="resume-header">
+        <h1>Resume</h1>
+        <p class="muted">
+          View the PDF below, or open it in a new tab for the best full-page experience.
+        </p>
 
-      <div class="resume-actions">
-        <a
-          class="btn primary"
-          href="assets/ty_spanbauer_resume.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          Open in new tab
-        </a>
+        <div class="resume-actions">
+          <a class="btn primary" href="assets/ty_spanbauer_resume.pdf" target="_blank" rel="noopener">
+            Open in new tab
+          </a>
+          <a class="btn" href="assets/ty_spanbauer_resume.pdf" download>
+            Download PDF
+          </a>
+        </div>
+      </section>
 
-        <a
-          class="btn"
-          href="assets/ty_spanbauer_resume.pdf"
-          download
-        >
-          Download PDF
-        </a>
+      <div class="resume-viewer">
+        <iframe
+          src="assets/ty_spanbauer_resume.pdf"
+          title="Ty Spanbauer Resume PDF">
+        </iframe>
       </div>
-    </section>
 
-    <section class="resume-viewer-section">
-      <iframe
-        class="resume-pdf-frame"
-        src="assets/ty_spanbauer_resume.pdf"
-        title="Ty Spanbauer Resume PDF"
-      ></iframe>
-    </section>
-
-    <p class="resume-note">
-      If the embedded viewer does not display correctly, 
-      <a href="assets/ty_spanbauer_resume.pdf" target="_blank" rel="noopener">open the PDF directly</a>.
-    </p>
+      <p class="resume-note">
+        If the embedded viewer does not display correctly,
+        <a href="assets/ty_spanbauer_resume.pdf" target="_blank" rel="noopener">open the PDF directly</a>.
+      </p>
+    </div>
   </main>
 
   <footer>© 2025 Ty Spanbauer</footer>
