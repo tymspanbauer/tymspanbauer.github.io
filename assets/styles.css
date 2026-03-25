@@ -18,7 +18,8 @@
   box-sizing:border-box;
 }
 
-html, body{
+html,
+body{
   margin:0;
   padding:0;
 }
@@ -44,8 +45,7 @@ footer{
   text-align:center;
 }
 
-/* ================= HEADER ================= */
-
+/* Header */
 .site-header{
   position:sticky;
   top:0;
@@ -85,6 +85,7 @@ nav a{
   text-decoration:none;
   padding:6px 10px;
   border-radius:10px;
+  line-height:1.2;
 }
 
 nav a:hover,
@@ -99,8 +100,7 @@ nav a.active{
   background:#1c1c1c;
 }
 
-/* ================= HERO ================= */
-
+/* Hero */
 .hero{
   max-width:1040px;
   margin:28px auto 8px;
@@ -127,8 +127,7 @@ nav a.active{
   flex-wrap:wrap;
 }
 
-/* ================= BUTTONS ================= */
-
+/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -156,8 +155,7 @@ nav a.active{
   outline:none;
 }
 
-/* ================= SECTIONS ================= */
-
+/* Shared sections */
 .section{
   max-width:1040px;
   margin:28px auto;
@@ -175,12 +173,56 @@ nav a.active{
   max-width:82ch;
 }
 
-/* ================= GRID / CARDS ================= */
+.meta{
+  color:var(--sub);
+  font-size:14px;
+}
 
+/* Recognition */
+.recognition-list{
+  display:grid;
+  gap:18px;
+  margin-top:14px;
+}
+
+.recognition-item{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+
+.recognition-item h3{
+  margin:0 0 10px;
+}
+
+.recognition-item .muted{
+  max-width:none;
+  margin-bottom:0;
+}
+
+.recognition-quote{
+  margin:12px 0 10px;
+  padding-left:12px;
+  border-left:3px solid #e0e6ee;
+  color:var(--sub);
+  line-height:1.6;
+}
+
+.recognition-meta{
+  margin:0 0 8px;
+  font-size:14px;
+  color:var(--sub);
+}
+
+.recognition-link{
+  margin:0;
+}
+
+/* Projects */
 .grid{
-  max-width:1040px;
-  margin:24px auto;
-  padding:0 16px;
+  margin-top:18px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:16px;
@@ -202,7 +244,88 @@ nav a.active{
   margin-bottom:6px;
 }
 
-/* ================= RESPONSIVE ================= */
+.card h3{
+  margin:0;
+}
+
+.badge{
+  display:inline-block;
+  padding:4px 8px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  font-size:12px;
+  color:var(--sub);
+  background:#fff;
+  white-space:nowrap;
+}
+
+/* Lower info section */
+.info-section{
+  margin-top:36px;
+  margin-bottom:32px;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr);
+  gap:24px;
+  align-items:start;
+}
+
+.info-main{
+  min-width:0;
+}
+
+.info-side{
+  display:grid;
+  gap:16px;
+}
+
+.info-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+
+.info-card h2,
+.info-main h2{
+  margin:0 0 10px;
+}
+
+.info-card p{
+  margin:0 0 10px;
+}
+
+.info-card p:last-child{
+  margin-bottom:0;
+}
+
+.tags{
+  list-style:none;
+  padding:0;
+  margin:12px 0 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.tags li{
+  padding:6px 10px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:#fff;
+  font-size:14px;
+  color:var(--ink);
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+}
 
 @media (max-width:640px){
   .wrap{
@@ -215,5 +338,14 @@ nav a.active{
 
   nav a{
     padding:6px 8px;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
+
+  .cardhead{
+    flex-direction:column;
+    align-items:flex-start;
   }
 }
