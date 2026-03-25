@@ -43,6 +43,17 @@ footer{
   margin:0 0 16px;
   padding:0;
 }
+.main.container {
+  outline: 3px solid red;
+}
+
+.pdf-container {
+  outline: 3px solid blue;
+}
+
+.pdf-frame {
+  outline: 3px solid green;
+}
 .site-header{
   position:sticky;
   top:0;
