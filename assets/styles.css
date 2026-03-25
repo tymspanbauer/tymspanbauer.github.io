@@ -258,20 +258,11 @@ nav a.active{
   margin-bottom:32px;
 }
 
-.info-grid{
+.info-grid--sidebar{
   display:grid;
-  grid-template-columns:minmax(0,1.4fr) minmax(300px,0.9fr);
-  gap:24px;
-  align-items:start;
-}
-
-.info-main{
-  min-width:0;
-}
-
-.info-side{
-  display:grid;
+  grid-template-columns:repeat(2, minmax(280px, 1fr));
   gap:16px;
+  align-items:start;
 }
 
 .info-card{
@@ -282,8 +273,7 @@ nav a.active{
   box-shadow:var(--shadow);
 }
 
-.info-card h2,
-.info-main h2{
+.info-card h2{
   margin:0 0 10px;
 }
 
@@ -314,7 +304,7 @@ nav a.active{
 }
 
 @media (max-width:900px){
-  .info-grid{
+  .info-grid--sidebar{
     grid-template-columns:1fr;
   }
 }
