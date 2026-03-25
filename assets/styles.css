@@ -45,7 +45,6 @@ footer{
   text-align:center;
 }
 
-/* Header */
 .site-header{
   position:sticky;
   top:0;
@@ -100,7 +99,6 @@ nav a.active{
   background:#1c1c1c;
 }
 
-/* Hero */
 .hero{
   max-width:1040px;
   margin:28px auto 8px;
@@ -127,7 +125,6 @@ nav a.active{
   flex-wrap:wrap;
 }
 
-/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -155,7 +152,6 @@ nav a.active{
   outline:none;
 }
 
-/* Shared sections */
 .section{
   max-width:1040px;
   margin:28px auto;
@@ -178,7 +174,6 @@ nav a.active{
   font-size:14px;
 }
 
-/* Recognition */
 .recognition-list{
   display:grid;
   gap:18px;
@@ -220,7 +215,6 @@ nav a.active{
   margin:0;
 }
 
-/* Projects */
 .grid{
   margin-top:18px;
   display:grid;
@@ -259,7 +253,6 @@ nav a.active{
   white-space:nowrap;
 }
 
-/* Lower info section */
 .info-section{
   margin-top:36px;
   margin-bottom:32px;
@@ -267,7 +260,7 @@ nav a.active{
 
 .info-grid{
   display:grid;
-  grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr);
+  grid-template-columns:minmax(0,1.4fr) minmax(300px,0.9fr);
   gap:24px;
   align-items:start;
 }
@@ -320,7 +313,6 @@ nav a.active{
   color:var(--ink);
 }
 
-/* Responsive */
 @media (max-width:900px){
   .info-grid{
     grid-template-columns:1fr;
